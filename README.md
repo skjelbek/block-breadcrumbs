@@ -1,0 +1,3 @@
+# Block-breadcrumbs
+
+This is an EPiServer add-on intented to make it easier for editors to get a hold of where they are in the "inception" of editing blocks in blocks in blocks in blocks...
