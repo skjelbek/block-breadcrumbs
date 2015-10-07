@@ -1,0 +1,49 @@
+
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files build by Visual Studio
+*.obj
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+
+# NuGet Packages Directory is not committed
+packages/*
+
+# But the config is - with default VS settings, this will download missing packages
+!packages/repositories.config
+
+# Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
+!packages/build/
+
+# Ignore everything but the readme from the database folder
+# We do not distribute the databases
+db/*
+!db/clean databases.zip
+!db/readme.md
+
+node_modules
+*npm-debug.log
+
+# Git merge recovery files
+*.orig
