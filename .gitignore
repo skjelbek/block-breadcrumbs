@@ -47,3 +47,5 @@ node_modules
 
 # Git merge recovery files
 *.orig
+
+TestWeb/App_Data

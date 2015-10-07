@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("BlockBreadcrumbs")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("This is an EPiServer add-on intented to make it easier for editors to get a hold of where they are in the inception of editing blocks in blocks in blocks in blocks...")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Lars Skjelbek")]
 [assembly: AssemblyProduct("BlockBreadcrumbs")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e60c238f-c79a-47f3-b554-50a73bafddc2")]
+[assembly: Guid("2e4f6f4b-3c28-4717-bf42-fe87282aa493")]
 
 // Version information for an assembly consists of the following four values:
 //

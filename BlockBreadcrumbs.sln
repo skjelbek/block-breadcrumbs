@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockBreadcrumbs", "BlockBreadcrumbs\BlockBreadcrumbs.csproj", "{B8678CFE-BA44-4297-8EA0-8DF6A1C1059A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWeb", "TestWeb\TestWeb.csproj", "{E46F85EA-B3DD-4A9D-8310-64466AA5EC78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlockBreadcrumbs", "BlockBreadcrumbs\BlockBreadcrumbs.csproj", "{D7F21162-22CC-4F40-B62E-92DFAB930A52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B8678CFE-BA44-4297-8EA0-8DF6A1C1059A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8678CFE-BA44-4297-8EA0-8DF6A1C1059A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8678CFE-BA44-4297-8EA0-8DF6A1C1059A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8678CFE-BA44-4297-8EA0-8DF6A1C1059A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E46F85EA-B3DD-4A9D-8310-64466AA5EC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E46F85EA-B3DD-4A9D-8310-64466AA5EC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E46F85EA-B3DD-4A9D-8310-64466AA5EC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E46F85EA-B3DD-4A9D-8310-64466AA5EC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F21162-22CC-4F40-B62E-92DFAB930A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F21162-22CC-4F40-B62E-92DFAB930A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F21162-22CC-4F40-B62E-92DFAB930A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F21162-22CC-4F40-B62E-92DFAB930A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

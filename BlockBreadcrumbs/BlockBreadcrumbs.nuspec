@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>$id$</id>
+    <title>$title$</title>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/skjelbek/block-breadcrumbs/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/skjelbek/block-breadcrumbs</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <tags>episerver blocks</tags>
+    <dependencies>
+      <dependency id="EPiServer.CMS.Core" version="9.0.3" />
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
+    </dependencies>
+  </metadata>
+</package>
