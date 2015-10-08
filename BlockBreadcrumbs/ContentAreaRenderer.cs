@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using System.Collections.Generic;
+using System.Web;
 using System.Web.Mvc;
 using EPiServer.Core;
 
@@ -47,6 +48,12 @@ border: 20px solid #23b4e9;
 
         public override void Render(HtmlHelper htmlHelper, ContentArea contentArea)
         {
+            RenderBlockBreadcrumbsResources(htmlHelper);
+            base.Render(htmlHelper, contentArea);
+        }
+
+        protected void RenderBlockBreadcrumbsResources(HtmlHelper htmlHelper)
+        {
             var writer = htmlHelper.ViewContext.Writer;
             writer.Write("<style>");
             writer.Write(Css, CssClass);
@@ -54,7 +61,6 @@ border: 20px solid #23b4e9;
             writer.Write("<script>");
             writer.Write(Js, CssClass);
             writer.Write("</script>");
-            base.Render(htmlHelper, contentArea);
         }
 
         protected override void BeforeRenderContentAreaItemStartTag(TagBuilder tagBuilder, ContentAreaItem contentAreaItem)
