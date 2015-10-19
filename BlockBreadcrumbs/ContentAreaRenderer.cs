@@ -7,11 +7,11 @@ namespace BlockBreadcrumbs
 {
     public class ContentAreaRenderer : EPiServer.Web.Mvc.Html.ContentAreaRenderer
     {
-        protected string CssClass { get; set; }
+        protected string HighlightedCssClass { get; set; }
 
         public ContentAreaRenderer()
         {
-            CssClass = "highlighted";
+            HighlightedCssClass = "bbcrumbs-highlighted";
         }
 
         private const string Css = @"
@@ -56,10 +56,10 @@ border: 20px solid #23b4e9;
         {
             var writer = htmlHelper.ViewContext.Writer;
             writer.Write("<style>");
-            writer.Write(Css, CssClass);
+            writer.Write(Css, HighlightedCssClass);
             writer.Write("</style>");
             writer.Write("<script>");
-            writer.Write(Js, CssClass);
+            writer.Write(Js, HighlightedCssClass);
             writer.Write("</script>");
         }
 
@@ -67,7 +67,7 @@ border: 20px solid #23b4e9;
         {
             var highLight = HttpContext.Current.Request[Constants.HighlightQueryStringKey];
             if (highLight != null && highLight.Equals(contentAreaItem.GetContent().ContentGuid.ToString()))
-                tagBuilder.AddCssClass(CssClass);
+                tagBuilder.AddCssClass(HighlightedCssClass);
             base.BeforeRenderContentAreaItemStartTag(tagBuilder, contentAreaItem);
         }
     }

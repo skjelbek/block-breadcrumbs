@@ -9,7 +9,7 @@ namespace BlockBreadcrumbs
 {
     public static class BreadcrumbHelper
     {
-        private const string DefaultCssClass = "breadcrumbs";
+        private const string DefaultCssClass = "bbcrumbs";
 
         private const string Css = @"
 .{0} {{
@@ -137,7 +137,7 @@ transform-origin: 0 0;
                 highlights.MoveNext();
 
                 var breadCrumbWrapper = new TagBuilder("div");
-                breadCrumbWrapper.AddCssClass("breadcrumbs");
+                breadCrumbWrapper.AddCssClass(cssClass);
 
                 writer.Write("<style>");
                 writer.Write(Css, cssClass);
