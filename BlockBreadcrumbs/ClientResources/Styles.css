@@ -1,0 +1,112 @@
+﻿.bbcrumbs {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #333333;
+    height: 122px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+    .bbcrumbs .bbcrumbs-item {
+        float: left;
+        width: 102px;
+        margin-right: 40px;
+        height: 100%;
+        position: relative;
+    }
+
+    .bbcrumbs .bbcrumbs-title {
+        font-size: 11px;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        display: inline-block;
+    }
+
+        .bbcrumbs .bbcrumbs-title.bbcrumbs-this {
+            position: absolute;
+            top: 50%;
+            margin-top: 5px;
+        }
+
+    .bbcrumbs .bbcrumbs-usage {
+        display: block;
+        border: 1px solid #898989;
+        height: 102px;
+        width: 102px;
+        position: relative;
+        background: white;
+    }
+
+    .bbcrumbs .bbcrumbs-usage--multiple {
+        line-height: 90px;
+        text-align: center;
+        font-size: 27px;
+        color: #6E6E6E;
+    }
+
+        .bbcrumbs .bbcrumbs-usage--multiple:after {
+            position: absolute;
+            content: '';
+            top: 5px;
+            left: 5px;
+            height: 100%;
+            width: 100%;
+            border: 1px solid #898989;
+            z-index: -1;
+        }
+
+    .bbcrumbs .bbcrumbs-item.bbcrumbs-pending .bbcrumbs-usage {
+        border-color: #23b4e9;
+        position: relative;
+    }
+
+        .bbcrumbs .bbcrumbs-item.bbcrumbs-pending .bbcrumbs-usage:after {
+            position: absolute;
+            content: 'Unpublished';
+            bottom: -9px;
+            right: 6px;
+            background: #23b4e9;
+            font-size: 8px;
+            color: white;
+            padding: 0 4px;
+        }
+
+    .bbcrumbs .bbcrumbs-arrow {
+        position: absolute;
+        right: -26px;
+        top: 50%;
+        margin-top: 5px;
+        color: #717171;
+        font-size: 18px;
+    }
+
+    .bbcrumbs iframe {
+        pointer-events: none;
+        -ms-zoom: 0.08547009;
+        -moz-transform: scale(0.08547009);
+        -moz-transform-origin: 0 0;
+        -o-transform: scale(0.08547009);
+        -o-transform-origin: 0 0;
+        -webkit-transform: scale(0.08547009);
+        transform: scale(0.08547009);
+        -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+
+.bbcrumbs-highlighted {
+    position: relative;
+}
+
+    .bbcrumbs-highlighted:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 20px solid #23b4e9;
+    }

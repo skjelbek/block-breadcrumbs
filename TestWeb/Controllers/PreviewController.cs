@@ -11,6 +11,7 @@ using TestWeb.Models.ViewModels;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
 using EPiServer;
+using EPiServer.Framework.Web.Mvc;
 
 namespace TestWeb.Controllers
 {
@@ -24,7 +25,8 @@ namespace TestWeb.Controllers
         Tags = new[] { RenderingTags.Preview, RenderingTags.Edit },
         AvailableWithoutTag = false)]
     [VisitorGroupImpersonation]
-    public class PreviewController : ActionControllerBase, IRenderTemplate<BlockData>, IModifyLayout
+    [RequireClientResources]
+    public class PreviewController : Controller, IRenderTemplate<BlockData>, IModifyLayout
     {
         private readonly IContentLoader _contentLoader;
         private readonly TemplateResolver _templateResolver;

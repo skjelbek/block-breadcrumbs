@@ -1,19 +1,23 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>$id$</id>
-    <title>$title$</title>
-    <version>1.0.1.0</version>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <id>BlockBreadcrumbs</id>
+    <title>BlockBreadcrumbs for EPiServer</title>
+    <version>1.1.0</version>
+    <authors>Lars Skjelbek</authors>
+    <owners>Lars Skjelbek</owners>
     <licenseUrl>https://github.com/skjelbek/block-breadcrumbs/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/skjelbek/block-breadcrumbs</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <tags>episerver blocks</tags>
+    <description>EPiServer add-on with the purpose of giving editors a better overview and navigation experience when editing blocks.</description>
+    <tags>EPiServerModulePackage episerver blocks</tags>
     <dependencies>
-      <dependency id="EPiServer.CMS.Core" version="9.0.3" />
-      <dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
+      <dependency id="EPiServer.CMS.Core" version="9.0.0" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="bin\$configuration$\BlockBreadcrumbs.dll" target="lib\net45\" />
+    <file src="bin\$configuration$\BlockBreadcrumbs.zip" target="content\modules\_protected\BlockBreadcrumbs\" />
+    <file src="readme.txt" target=""/>
+  </files>
 </package>
