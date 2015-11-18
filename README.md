@@ -1,3 +1,4 @@
-# Block-breadcrumbs
+# BlockBreadcrumbs for EPiServer
 
-This is an EPiServer add-on intented to make it easier for editors to get a hold of where they are in the "inception" of editing blocks in blocks in blocks in blocks...
+EPiServer add-on with the purpose of giving editors a better overview and navigation experience when editing blocks.
+
