@@ -3,7 +3,7 @@
   <metadata>
     <id>BlockBreadcrumbs</id>
     <title>BlockBreadcrumbs for EPiServer</title>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <authors>Lars Skjelbek</authors>
     <owners>Lars Skjelbek</owners>
     <licenseUrl>https://github.com/skjelbek/block-breadcrumbs/blob/master/LICENSE</licenseUrl>
@@ -12,7 +12,8 @@
     <description>EPiServer add-on with the purpose of giving editors a better overview and navigation experience when editing blocks.</description>
     <tags>EPiServerModulePackage episerver blocks</tags>
     <dependencies>
-      <dependency id="EPiServer.CMS.Core" version="9.0.0" />
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
+      <dependency id="EPiServer.CMS.Core" version="7.11.0" />
     </dependencies>
   </metadata>
   <files>
