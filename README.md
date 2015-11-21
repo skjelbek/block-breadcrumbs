@@ -32,7 +32,7 @@ public class DependencyResolverInitialization : IConfigurableModule
     private static void ConfigureContainer(ConfigurationExpression container)
     {
         //Swap out the default ContentRenderer for our custom
-        container.For<ContentAreaRenderer>().Use<BlockBreadcrumbs.ContentAreaRenderer>();
+        container.For<EPiServer.Web.Mvc.Html.ContentAreaRenderer>().Use<BlockBreadcrumbs.ContentAreaRenderer>();
     }
 
     public void Initialize(InitializationEngine context) {}
