@@ -50,7 +50,7 @@ Make sure that you are requiring client resources:
 ### 3. Make a PreviewController
 The BlockBreadcrumbs is meant to be used in an on-page edit preview of a block. In order to enable this preview your will have to make a `PreviewController`. This is explained [here](http://joelabrahamsson.com/pattern-for-episerver-block-preview-mvc-controller/ "Pattern for EPiServer block preview MVC controller by Joel Abrahamsson") and [here](http://jondjones.com/how-to-preview-a-block-in-episerver/ "How to Preview a Block in Episerver by Jon D. Jones"), and also implemented in EPiServer's Alloy demo project for MVC.
 
-_One important difference from these examples is that you need to add this attribute to the PreviewController:_ `[RequireClientResources]`
+_One important difference from those examples is that you need to add this attribute to the PreviewController:_ `[RequireClientResources]`
 
 ### 4. Use the HtmlHelper
 The last step is to call `@{ Html.RenderBlockBreadcrumbs(Model.PreviewContent); }` somewhere in your `Index.cshtml` for the PreviewController. You would typically add this line at the top of your view, but you are free to place it wherever you want. You can also style it the way you prefer.
