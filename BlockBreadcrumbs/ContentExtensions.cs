@@ -23,14 +23,14 @@ namespace BlockBreadcrumbs
             var currentRef = content;
             while (currentRef != null && !(currentRef is PageData))
             {
-                currentRef = GetOwners(currentRef, repo, out totalNumberOfReferences);
+                currentRef = GetFirstOwner(currentRef, repo, out totalNumberOfReferences);
                 if (currentRef != null) referenceTree.Add(currentRef);
             }
             referenceTree.Reverse();
             return referenceTree;
         }
 
-        private static IContent GetOwners(IContent content, IContentRepository repo, out int totalNumberOfReferences)
+        private static IContent GetFirstOwner(IContent content, IContentRepository repo, out int totalNumberOfReferences)
         {
             var parentRef = repo.GetReferencesToContent(content.ContentLink, true).ToArray();
             totalNumberOfReferences = parentRef.Length;
