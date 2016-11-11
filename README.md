@@ -7,6 +7,13 @@ Install the NuGet package into your **web** project.
 
 `Install-Package BlockBreadcrumbs`
 
+Latest compatible version for your EPiServer project:
+
+| EPiServer.CMS.Core  | BlockBreadcrumbs |
+| ------------------- | ---------------- |
+| ≥ 10.0.1            | 1.3.0            |
+| ≥ 8.0.0 && ≤ 9.12.3 | 1.2.2            |
+
 ## Setup
 
 ### 1. Register BlockBreadcrumbs.ContentAreaRenderer
