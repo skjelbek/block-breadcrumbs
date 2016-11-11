@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using EPiServer;
+﻿using EPiServer;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.ServiceLocation;
 using EPiServer.SpecializedProperties;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace BlockBreadcrumbs
 {
@@ -71,7 +71,7 @@ namespace BlockBreadcrumbs
         private static ContentVersion LastVersion(this IContent content)
         {
             var versionRep = ServiceLocator.Current.GetInstance<IContentVersionRepository>();
-            var lastVersion = versionRep.List(content.ContentLink).LastOrDefault();
+            var lastVersion = versionRep.List(content.ContentLink).OrderBy(v => v.Saved).LastOrDefault();
             return lastVersion;
         }
 
