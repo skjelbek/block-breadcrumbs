@@ -70,16 +70,8 @@ namespace BlockBreadcrumbs
 
         private static ContentVersion LastVersion(this IContent content)
         {
-            //Changed in EPi 10: CMS-3153 - IContentVersionRepository List methods have been consolidated into one. PageVersion is obsoleted.
-            //new signature: IEnumerable<ContentVersion> List(VersionFilter filter, int startIndex, int maxRows, out int totalCount);
-            var versionsAvailable = 0;
             var versionRep = ServiceLocator.Current.GetInstance<IContentVersionRepository>();
-            var lastVersion = versionRep.List(
-                new VersionFilter()
-                {
-                    Statuses = new List<VersionStatus> { VersionStatus.Published },
-                    ContentLink = content.ContentLink
-                }, 0, 20, out versionsAvailable).LastOrDefault();
+            var lastVersion = versionRep.List(content.ContentLink).OrderBy(v => v.Saved).LastOrDefault();
             return lastVersion;
         }
 
