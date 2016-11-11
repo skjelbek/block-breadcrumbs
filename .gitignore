@@ -49,3 +49,4 @@ node_modules
 *.orig
 
 TestWeb/App_Data
+.vs/
