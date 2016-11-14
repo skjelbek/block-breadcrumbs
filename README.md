@@ -2,11 +2,17 @@
 
 An EPiServer add-on with the purpose of giving editors a better overview and navigation experience when editing blocks.
 
+![BlockBreadcrumbs when editing a block](https://cdn-images-1.medium.com/max/800/1*cStoHkbiNeRB7HxSA8LGpg.png)
+
+Read this blog post for more info: https://medium.com/@skjelbek/blockbreadcrumbs-an-add-on-for-improving-the-episerver-ui-when-editing-blocks-a818aeabdbd2
+
 ## Installation
 Install the NuGet package into your **web** project.
 
-`Install-Package BlockBreadcrumbs`
-
+```
+Install-Package BlockBreadcrumbs
+```
+---
 Latest compatible version for your EPiServer project:
 
 | EPiServer.CMS.Core  | BlockBreadcrumbs |
