@@ -39,7 +39,6 @@ public class DependencyResolverInitialization : IConfigurableModule
     public void ConfigureContainer(ServiceConfigurationContext context)
     {
         context.Container.Configure(ConfigureContainer);
-        DependencyResolver.SetResolver(new StructureMapDependencyResolver(context.Container));
     }
 
     private static void ConfigureContainer(ConfigurationExpression container)
