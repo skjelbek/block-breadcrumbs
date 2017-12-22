@@ -15,10 +15,11 @@ Install-Package BlockBreadcrumbs
 ---
 Latest compatible version for your EPiServer project:
 
-| EPiServer.CMS.Core  | BlockBreadcrumbs |
-| ------------------- | ---------------- |
-| ≥ 10.0.1            | 1.3.0            |
-| ≥ 8.0.0 && ≤ 9.12.3 | 1.2.2            |
+| EPiServer.CMS.Core   | BlockBreadcrumbs |
+| -------------------- | ---------------- |
+| ≥ 11.1.0 && ≤ 12.0.0 | 2.0.0            |
+| ≥ 10.0.1             | 1.3.0            |
+| ≥ 8.0.0 && ≤ 9.12.3  | 1.2.2            |
 
 ## Setup
 
@@ -33,23 +34,17 @@ In order to get highlighting of a block in a thumbnail you need to use BlockBrea
 
 ```csharp
 [InitializableModule]
-[ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
+[ModuleDependency(typeof(EPiServer.Web.InitializationModule), typeof(NinjectWebCommon))]
 public class DependencyResolverInitialization : IConfigurableModule
 {
     public void ConfigureContainer(ServiceConfigurationContext context)
     {
-        context.Container.Configure(ConfigureContainer);
+        context.Services.AddTransient<EPiServer.Web.Mvc.Html.ContentAreaRenderer, BlockBreadcrumbs.ContentAreaRenderer>();
     }
 
-    private static void ConfigureContainer(ConfigurationExpression container)
-    {
-        //Swap out the default ContentRenderer for our custom
-        container.For<EPiServer.Web.Mvc.Html.ContentAreaRenderer>().Use<BlockBreadcrumbs.ContentAreaRenderer>();
-    }
-
-    public void Initialize(InitializationEngine context) {}
-    public void Uninitialize(InitializationEngine context) {}
-    public void Preload(string[] parameters) {}
+    public void Initialize(InitializationEngine context) { }
+    public void Uninitialize(InitializationEngine context) { }
+    public void Preload(string[] parameters) { }
 }
 ```
 
